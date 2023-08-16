@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-
+import { getCart } from "./api";
 function Login() {
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
@@ -39,6 +39,7 @@ function Login() {
 
             // Store the JSON string in localStorage under the key "userData" (you can use any key you prefer)
             localStorage.setItem("userData", jsonString);
+            getCart(data);
             navigate(path, { replace: true });
 
             console.log("submitted");

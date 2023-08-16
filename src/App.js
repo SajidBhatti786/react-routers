@@ -18,6 +18,7 @@ import Photos from './pages/Host/Photos';
 import Details from './pages/Host/Details';
 import NotFount from './pages/Host/NotFount';
 import AuthRequired from './pages/Host/AuthRequired';
+import Cart from './Cart';
 import Login from './Login';
 import HostVansDetailsLayout from './pages/Host/HostVansDetailsLayout';
 
@@ -44,7 +45,7 @@ function App() {
               </Route>
           </Route>
         </Route>
-          
+          <Route path='cart' element={<Cart />} />
           <Route path='*' element={<NotFount />} />
           <Route path='/login' element={<Login/> } />
         </Route>

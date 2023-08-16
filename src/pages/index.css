@@ -1063,3 +1063,77 @@ img.graph {
   color: #ff8c38;
   margin-right: 5px;
 }
+/* CSS for Cart component */
+
+/* Reset some default styles */
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.item-image {
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.item-details {
+  flex: 1;
+}
+
+.item-title {
+  font-weight: bold;
+}
+
+.item-price {
+  color: #777;
+}
+
+.cart-total {
+  text-align: right;
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 1px solid #ccc;
+}
+
+.total-label {
+  font-weight: bold;
+}
+
+.total-price {
+  color: #333;
+}
+
+.empty-cart {
+  text-align: center;
+  padding: 20px;
+}

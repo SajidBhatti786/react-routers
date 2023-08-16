@@ -5,7 +5,7 @@ import "../index.css";
 export default function HostLayout() {
   return (
     <>
-      <h1>Host Page</h1>
+      
       <nav>
         <NavLink
           end

@@ -67,6 +67,12 @@ export default function Header() {
           >
             Host
           </NavLink>
+          <NavLink
+            className={({ isActive }) => (isActive ? "active-link" : "")}
+            to="/cart"
+          >
+            Cart
+          </NavLink>
           {loggedIn === "true" ? (
             <button onClick={handleLogout}>Logout</button>
           ) : (

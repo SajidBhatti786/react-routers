@@ -3,6 +3,7 @@ import { useParams, NavLink, Link, Outlet } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { useLocation } from "react-router-dom";
+import { updateCart } from "../../api";
 export default function HostVanDetail() {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
@@ -124,11 +125,14 @@ export default function HostVanDetail() {
                       <div className="button buy-now">
                         <i className="bx bxs-zap"></i> Buy Now
                       </div>
-                      <Link to={`/vans/product/${product.category}`}>
-                        <div className="button add-cart">
-                          <i className="bx bxs-cart"></i> Add to Cart
-                        </div>
-                      </Link>
+
+                      <div
+                        className="button add-cart"
+                        onClick={() => updateCart(product)}
+                      >
+                        <i className="bx bxs-cart"></i> Add to Cart
+                      </div>
+
                       <div className="button heart">
                         <i className="bx bxs-heart"></i> Add to Wishlist
                       </div>
